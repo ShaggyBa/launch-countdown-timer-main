@@ -1,0 +1,78 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: "Red Hat Text", sans-serif;
+}
+
+$Grayish-blue: hsl(237, 18%, 59%);
+$Soft-red: hsl(345, 95%, 68%);
+
+$White: hsl(0, 0%, 100%);
+$Dark-desaturated-blue: hsl(236, 21%, 26%);
+$Very-dark-blue: hsl(235, 16%, 14%);
+$Very-dark-mostly-black-blue: hsl(234, 17%, 12%);
+
+li {
+	list-style: none;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	min-height: 100vh;
+	height: 100%;
+	overflow: hidden;
+	background:
+		url("../images/bg-stars.svg") no-repeat center center,
+		$Very-dark-mostly-black-blue;
+}
+
+.container {
+	text-align: center;
+	max-width: 1440px;
+	margin: 0 auto;
+	flex: 1 0 auto;
+}
+
+#launching-phrase {
+	font-size: 52px;
+	color: $White;
+}
+
+.footer {
+	height: 30vh;
+	background: url("../images/pattern-hills.svg") repeat-x;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+
+	.attribution {
+		position: absolute;
+		bottom: 20px;
+		left: 50%;
+		transform: translateX(-50%);
+		font-size: 11px;
+		color: white;
+	}
+
+	.attribution a {
+		color: hsl(228, 45%, 44%);
+	}
+}
+
+.social ul {
+	display: flex;
+	justify-content: center;
+
+	& li {
+		margin-right: 35px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}

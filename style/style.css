@@ -1,0 +1,64 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Red Hat Text", sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  overflow: hidden;
+  background: url("../images/bg-stars.svg") no-repeat center center, hsl(234, 17%, 12%);
+}
+
+.container {
+  text-align: center;
+  max-width: 1440px;
+  margin: 0 auto;
+  flex: 1 0 auto;
+}
+
+#launching-phrase {
+  font-size: 52px;
+  color: hsl(0, 0%, 100%);
+}
+
+.footer {
+  height: 30vh;
+  background: url("../images/pattern-hills.svg") repeat-x;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.footer .attribution {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 11px;
+  color: white;
+}
+.footer .attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.social ul {
+  display: flex;
+  justify-content: center;
+}
+.social ul li {
+  margin-right: 35px;
+}
+.social ul li:last-child {
+  margin-right: 0;
+}
