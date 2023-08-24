@@ -179,9 +179,16 @@ li {
 
 	& li {
 		margin-right: 35px;
-
+		font-size: 32px;
 		&:last-child {
 			margin-right: 0;
+		}
+		& a {
+			color: $Grayish-blue;
+			transition: color 0.3s ease-out;
+		}
+		& a:hover {
+			color: $Soft-red;
 		}
 	}
 }

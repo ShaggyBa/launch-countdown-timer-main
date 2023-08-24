@@ -162,7 +162,15 @@ li {
 }
 .social ul li {
   margin-right: 35px;
+  font-size: 32px;
 }
 .social ul li:last-child {
   margin-right: 0;
+}
+.social ul li a {
+  color: hsl(237, 18%, 59%);
+  transition: color 0.3s ease-out;
+}
+.social ul li a:hover {
+  color: hsl(345, 95%, 68%);
 }
