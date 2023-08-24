@@ -174,3 +174,95 @@ li {
 .social ul li a:hover {
   color: hsl(345, 95%, 68%);
 }
+
+@media (max-width: 767px) {
+  .countdown .countdown-item {
+    width: 125px;
+    height: 125px;
+    margin-right: 25px;
+  }
+  .countdown .countdown-item .timer {
+    font-size: 62px;
+  }
+  .countdown .countdown-item .timer::before {
+    height: 60px;
+  }
+  .countdown .countdown-item .timer::after {
+    height: 60px;
+  }
+}
+@media (max-width: 582px) {
+  .countdown .countdown-item {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+  }
+  .countdown .countdown-item .timer {
+    font-size: 42px;
+  }
+  .countdown .countdown-item .timer::before {
+    height: 45px;
+  }
+  .countdown .countdown-item .timer::after {
+    height: 45px;
+    transform: translateY(35%);
+  }
+  .countdown .countdown-item label {
+    font-size: 13px;
+    letter-spacing: 5px;
+  }
+}
+@media (max-width: 462px) {
+  #launching-phrase {
+    font-size: 20px;
+  }
+  .countdown .countdown-item {
+    width: 80px;
+    height: 80px;
+    margin-right: 15px;
+  }
+  .countdown .countdown-item .timer {
+    font-size: 32px;
+  }
+  .countdown .countdown-item .timer::before {
+    height: 35px;
+  }
+  .countdown .countdown-item .timer::after {
+    height: 35px;
+    transform: translateY(40%);
+  }
+  .countdown .countdown-item label {
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-top: 45px;
+  }
+  .social ul li {
+    margin-right: 25px;
+    font-size: 24px;
+  }
+}
+@media (max-width: 372px) {
+  #launching-phrase {
+    font-size: 18px;
+  }
+  .countdown .countdown-item {
+    width: 65px;
+    height: 65px;
+    margin-right: 10px;
+  }
+  .countdown .countdown-item .timer {
+    font-size: 24px;
+  }
+  .countdown .countdown-item .timer::before {
+    height: 25px;
+  }
+  .countdown .countdown-item .timer::after {
+    height: 25px;
+    transform: translateY(40%);
+  }
+  .countdown .countdown-item label {
+    font-size: 9px;
+    letter-spacing: 2px;
+    margin-top: 30px;
+  }
+}

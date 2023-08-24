@@ -192,3 +192,109 @@ li {
 		}
 	}
 }
+
+@media (max-width: 767px) {
+	.countdown .countdown-item {
+		width: 125px;
+		height: 125px;
+		margin-right: 25px;
+
+		& .timer {
+			font-size: 62px;
+
+			&::before {
+				height: 60px;
+			}
+			&::after {
+				height: 60px;
+			}
+		}
+	}
+}
+
+@media (max-width: 582px) {
+	.countdown .countdown-item {
+		width: 100px;
+		height: 100px;
+		margin-right: 20px;
+
+		& .timer {
+			font-size: 42px;
+
+			&::before {
+				height: 45px;
+			}
+			&::after {
+				height: 45px;
+				transform: translateY(35%);
+			}
+		}
+
+		& label {
+			font-size: 13px;
+			letter-spacing: 5px;
+		}
+	}
+}
+
+@media (max-width: 462px) {
+	#launching-phrase {
+		font-size: 20px;
+	}
+	.countdown .countdown-item {
+		width: 80px;
+		height: 80px;
+		margin-right: 15px;
+
+		& .timer {
+			font-size: 32px;
+
+			&::before {
+				height: 35px;
+			}
+			&::after {
+				height: 35px;
+				transform: translateY(40%);
+			}
+		}
+
+		& label {
+			font-size: 11px;
+			letter-spacing: 2px;
+			margin-top: 45px;
+		}
+	}
+	.social ul li {
+		margin-right: 25px;
+		font-size: 24px;
+	}
+}
+
+@media (max-width: 372px) {
+	#launching-phrase {
+		font-size: 18px;
+	}
+	.countdown .countdown-item {
+		width: 65px;
+		height: 65px;
+		margin-right: 10px;
+
+		& .timer {
+			font-size: 24px;
+
+			&::before {
+				height: 25px;
+			}
+			&::after {
+				height: 25px;
+				transform: translateY(40%);
+			}
+		}
+
+		& label {
+			font-size: 9px;
+			letter-spacing: 2px;
+			margin-top: 30px;
+		}
+	}
+}
