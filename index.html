@@ -4,14 +4,12 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- displays site properly based on user's device -->
 
 	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
 	<title>Frontend Mentor | Launch countdown timer</title>
 	<link rel="stylesheet" href="style/style.css">
 	<link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap" rel="stylesheet">
-	<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
 </head>
 
 <body>
@@ -19,10 +17,24 @@
 		<div class="container">
 			<h1 id="launching-phrase">We're launching soon</h1>
 
-			Days
-			Hours
-			Minutes
-			Seconds
+			<section class="countdown">
+				<div class="countdown-item">
+					<div class="timer"><span id="days">08</span></div>
+					<label for="days">days</label>
+				</div>
+				<div class="countdown-item">
+					<div class="timer"><span id="hours">23</span></div>
+					<label for="days">hours</label>
+				</div>
+				<div class="countdown-item">
+					<div class="timer"><span id="minutes">55</span></div>
+					<label for="minutes">minutes</label>
+				</div>
+				<div class="countdown-item">
+					<div class="timer"><span id="seconds">41</span></div>
+					<label for="seconds">seconds</label>
+				</div>
+			</section>
 
 		</div>
 		<footer class="footer">
@@ -32,10 +44,6 @@
 					<li><a href="#"><img src="images/icon-pinterest.svg" alt="pinterest"></a></li>
 					<li><a href="#"><img src="images/icon-instagram.svg" alt="instagram"></a></li>
 				</ul>
-			</div>
-			<div class="attribution">
-				Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-				Coded by <a href="https://github.com/ShaggyBa">ShaggyBa</a>
 			</div>
 		</footer>
 	</div>
