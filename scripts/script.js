@@ -1,8 +1,36 @@
+const phrases = [
+	"We're launching soon",
+	"Expect a phrase change",
+	"What kind of phrase",
+	"Lorem ipsum dolor sit amet",
+	"I will sell a startup for a million tenge",
+	"Build a rocket",
+	"Collecting a harem through",
+	"I'll get a job through",
+	"I will finish my task in",
+]
+
+const randPhrase = phrases[Math.floor(Math.random() * phrases.length)]
+
+const launchingPhrase = document.getElementById("launching-phrase")
+
+launchingPhrase.textContent = randPhrase
+
+const daysElement = document.getElementById("days");
+const hoursElement = document.getElementById("hours");
+const minutesElement = document.getElementById("minutes");
+const secondsElement = document.getElementById("seconds");
+
+function loadTimer() {
+	daysElement.textContent = localStorage?.getItem("days");
+	hoursElement.textContent = localStorage?.getItem("hours");
+	minutesElement.textContent = localStorage?.getItem("minutes");
+	secondsElement.textContent = localStorage?.getItem("seconds");
+}
+
+loadTimer()
+
 function startCountdown() {
-	const daysElement = document.getElementById("days");
-	const hoursElement = document.getElementById("hours");
-	const minutesElement = document.getElementById("minutes");
-	const secondsElement = document.getElementById("seconds");
 
 	const countdown = setInterval(function () {
 		let days = parseInt(daysElement.textContent);
@@ -13,6 +41,9 @@ function startCountdown() {
 		if (seconds > 0) {
 			seconds--;
 			secondsElement.textContent = seconds.toString().padStart(2, "0");
+
+			localStorage.setItem("seconds", secondsElement.textContent);
+
 		} else {
 			if (minutes > 0) {
 				minutes--;
@@ -20,6 +51,9 @@ function startCountdown() {
 
 				seconds = 59;
 				secondsElement.textContent = seconds.toString().padStart(2, "0");
+
+				localStorage.setItem("minutes", minutesElement.textContent);
+
 			} else {
 				if (hours > 0) {
 					hours--;
@@ -30,6 +64,9 @@ function startCountdown() {
 
 					seconds = 59;
 					secondsElement.textContent = seconds.toString().padStart(2, "0");
+
+					localStorage.setItem("hours", hoursElement.textContent);
+
 				} else {
 					if (days > 0) {
 						days--;
@@ -43,19 +80,16 @@ function startCountdown() {
 
 						seconds = 59;
 						secondsElement.textContent = seconds.toString().padStart(2, "0");
+
+						localStorage.setItem("days", daysElement.textContent);
+
 					} else {
 						clearInterval(countdown);
 					}
 				}
 			}
 		}
-
-		// daysElement.textContent = days.toString().padStart(2, "0");
-		// hoursElement.textContent = hours.toString().padStart(2, "0");
-		// minutesElement.textContent = minutes.toString().padStart(2, "0");
-		// secondsElement.textContent = seconds.toString().padStart(2, "0");
 	}, 1000);
 }
 
-// Запуск счетчика
 startCountdown();
