@@ -22,10 +22,19 @@ const minutesElement = document.getElementById("minutes");
 const secondsElement = document.getElementById("seconds");
 
 function loadTimer() {
-	daysElement.textContent = localStorage?.getItem("days");
-	hoursElement.textContent = localStorage?.getItem("hours");
-	minutesElement.textContent = localStorage?.getItem("minutes");
-	secondsElement.textContent = localStorage?.getItem("seconds");
+	if (localStorage.getItem("days")) {
+		daysElement.textContent = localStorage.getItem("days");
+	}
+	if (localStorage.getItem("hours")) {
+		hoursElement.textContent = localStorage.getItem("hours");
+	}
+	if (localStorage.getItem("minutes")) {
+		minutesElement.textContent = localStorage.getItem("minutes");
+	}
+	if (localStorage.getItem("seconds")) {
+		secondsElement.textContent = localStorage.getItem("seconds");
+	}
+	
 }
 
 loadTimer()
