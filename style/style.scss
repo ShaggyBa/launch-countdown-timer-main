@@ -131,12 +131,7 @@ li {
 
 				transition: all 1s ease-in-out;
 			}
-			&:hover {
-				&::after {
-					background: hsl(237, 21%, 21%);
-					transform: translateY(-60%) rotateX(180deg);
-				}
-			}
+		
 
 			& span::before {
 				content: "";
