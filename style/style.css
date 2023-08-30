@@ -63,6 +63,8 @@ li {
   letter-spacing: 10px;
   color: hsl(0, 0%, 100%);
   text-transform: uppercase;
+  position: relative;
+  z-index: 2;
 }
 
 .countdown {
@@ -113,6 +115,11 @@ li {
   background: hsl(236, 21%, 26%);
   border-radius: 0 0 10px 10px;
   box-shadow: 0px 9px 0px 0px rgba(6, 6, 6, 0.39);
+  transition: all 1s ease-in-out;
+}
+.countdown .countdown-item .timer:hover::after {
+  background: hsl(237, 21%, 21%);
+  transform: translateY(-60%) rotateX(180deg);
 }
 .countdown .countdown-item .timer span::before {
   content: "";
